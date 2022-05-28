@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    position: relative;
+    margin-left: 15px;
+    transition: 1s;
+}
+ul li::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0%;
+    bottom: -17px;
+    left: 0;
+    background-color: #9b8cec;
+    transition: .4s;
+}
+ul li:hover::after{
+    width: 100%;
+}
+ul li:nth-child(1):after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: -17px;
+    left: 0;
+    background-color: #9b8cec;
+}
+.dropdown-menu[data-bs-popper] {
+	margin-top: 17px;
+}
+ul li ul{
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+}
+ul li ul:hover li::after{
+    width: 0%;
+    height: 0%;
+}
+.button-1{
+    position: relative;
+    z-index: 99;
+}
+.button-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #7672fd;
+    border-radius: 25px;
+    transition: .4s;
+    z-index: -1;
+}
+.button-1:hover::before{
+    width: 100%;
+}
+.button-1:hover{
+    color: #fff !important;
+}
+.slaider{
+    background-color: #edf6ff;
+    overflow: hidden;
+}
+.slaider .slaider-caption{
+    
+    padding: 100px 50px;
+}
+.slaider-image{position: relative;padding: 238px 0;}
+.slaider-image img{width: 700px;position: absolute;top: -100px;right: -230px;}
+.button-2{
+    transition: .4s;
+    padding: 9px 16px;
+}
+.button-2:hover{
+    background-color: #fff;
+    color: #5252f0;
+}
+.service{}
+.service .service-caption{}
+.service .service-caption h5{color: #a08aea;}
+.service .service-caption h1{
+    position: relative;
+}
+.service .service-caption h1::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 7%;
+    bottom: -8px;
+    left: 0;
+    background-color: #9b8cec;
+}
+.service .service-caption {}
+.service .service-caption p{}
+.service .card{background-color: #f9fcff;padding: 30px;box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .2);}
+.service .card h2{}
+.service .card span{background-color: #5252f0;color: #fff;padding: 13px;border-radius: 60px 60px 60px 0px;max-width: 22%;}
+.service .card span{
+    position: relative;
+}
+.service .card span::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    bottom: -17px;
+    left: 0;
+    background-color: #9b8cec;
+    transition: .5s;
+}
+.service .card:hover span::after{
+    width: 80%;
+}
+.service .card:hover span{
+    background-color: #fff;
+    color: #5252f0;
+    transition: .4s;
+}
+.service .card:hover{
+    background-color: #3a4af2;
+    transform: scale(1.1);
+    transition: .5s;
+    color: #fff !important;
+}
+.service .card p{margin-top: 20px; color: #918f8e;}
+.service .card:hover p{
+    color: #fff;
+}
+.service-image{position: relative;}
+.service-image img{position: absolute;left: -48px;bottom: -47px;z-index: -1;}
+.animated{
+    background: linear-gradient(0deg, rgba(42, 52, 79, 0.8), rgba(42, 52, 79, 0.8)), url(./img/video-bg.jpg) no-repeat top center;
+    padding-bottom: 247px;
+}
+
+.animated-caption {
+    padding-top: 120px;
+    color: #fff;
+  }
+.animated h5{font-size: 26px;}
+.animated h2{
+    position: relative;
+    font-size: 45px;
+}
+.animated h2::after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 9%;
+    bottom: -15px;
+    left: 568px;
+    background-color: #fff;
+}
+.animated p{font-size: 24px;max-width: 47%;margin: 38px auto;}
+.animated span{margin-top: 50px;display: inline-block;background-color: #fff;padding: 32px;border-radius: 50%;height: 90px;width: 90px;color: #3763eb; position: relative;}
+.animated span::before{
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation-name: aminul;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.animated span::after{
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: -18px;
+    height: 126px;
+    width: 125px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation-name: aminul;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes aminul {
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+    to{
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+}
