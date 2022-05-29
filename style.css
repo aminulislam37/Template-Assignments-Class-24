@@ -20,7 +20,7 @@ ul li::after{
 ul li:hover::after{
     width: 100%;
 }
-ul li:nth-child(1):after{
+ul .active:nth-child(1):after{
     content: "";
     position: absolute;
     height: 3px;
@@ -29,25 +29,28 @@ ul li:nth-child(1):after{
     left: 0;
     background-color: #9b8cec;
 }
-.dropdown-menu[data-bs-popper] {
-	margin-top: 17px;
-}
 ul li ul{
-    visibility: hidden;
+    position: absolute;
+    top: 145%;
+    left: 0;
+    width: 172px;
+    list-style: none;
+    background-color: #fff;
     opacity: 0;
+    visibility: hidden;
     transition: .4s;
 }
 ul li:hover ul{
     visibility: visible;
     opacity: 1;
 }
-ul li ul:hover li::after{
-    width: 0%;
-    height: 0%;
-}
-.button-1{
-    position: relative;
-    z-index: 99;
+
+ul li ul li a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #0167fd;
+    padding: 13px 18px;
+    display: inline-block;
 }
 .button-1::before{
     content: "";
